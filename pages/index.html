@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <script src="/assets/js/app.js"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>rock paper scissors</h1>
+        <ul class="nav-bar">
+            <li><a class= "link" href="/pages/about.html">About</a></li>
+            <li><a class= "link" href="https://david-kan.com/">David Kan</a></li>
+        </ul>
+    </div>
+    
+    <div class="move-score">
+        <div class="left">
+            <img id="player-move" src="/assets/images/left/rock-left.svg" alt="">
+            <h2>Player:</h2>
+            <h2><span id="player-score">0</span></h2>
+        </div>
+        <h2><span id="result-message">Make your move!</span></h2>
+        <div class="right">
+            <img id="computuer-move" src="/assets/images/right/rock-right.svg" alt="">
+            <h2>Computer:</h2>
+            <h2><span id="computer-score">0</span></h2>
+        </div>
+    </div>
+      
+
+    <h2 class="move-message">Pick your move: </h2>
+    <div class="move-selector">
+        <button class="choice" data-choice="rock"><img class="choice" src="/assets/images/left/rock-left.svg" alt="Rock"></button>
+        <button class="choice" data-choice="paper"><img class="choice" src="/assets/images/left/paper-left.svg" alt="Paper"></button>
+        <button class="choice" data-choice="scissors"><img class="choice" src="/assets/images/left/scissors-left.svg" alt="Scissors"></button>
+    </div>
+
+</body>
+</html>
