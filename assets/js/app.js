@@ -48,8 +48,8 @@ function triggerPlayAnimation() {
     const playerMoveImg = document.getElementById("player-move");
     const computerMoveImg = document.getElementById("computer-move");
 
-    playerMoveImg.src = `./rock-paper-scissors/assets/images/left/rock-left.svg`;
-    computerMoveImg.src = `./rock-paper-scissors/assets/images/right/rock-right.svg`;
+    playerMoveImg.src = `/assets/images/left/rock-left.svg`;
+    computerMoveImg.src = `/assets/images/right/rock-right.svg`;
     
 
     playerMoveImg.classList.add("bounce");
@@ -91,16 +91,28 @@ function updateGameScore(result, playerMove, computerMove) {
     playerScoreLabel.textContent = playerScore;
     computerScoreLabel.textContent = computerScore;
 
-    playerMoveImg.src = `./rock-paper-scissors/assets/images/left/${playerMove}-left.svg`;
-    computerMoveImg.src = `./rock-paper-scissors/assets/images/right/${computerMove}-right.svg`;
+    playerMoveImg.src = `/assets/images/left/${playerMove}-left.svg`;
+    computerMoveImg.src = `/assets/images/right/${computerMove}-right.svg`;
 } // updateGame
 
+
+ /**
+     * Disables move buttons for a specified duration.
+     * @param {number} duration The time in ms to keep the buttons disabled.
+     */
+ function disableButtons(duration) {
+    buttons.forEach(button => (button.disabled = true));
+    setTimeout(() => {
+        buttons.forEach(button => (button.disabled = false));
+    }, duration);
+}
 
 const buttons = document.querySelectorAll(".choice");
 console.log(buttons);
 buttons.forEach(button => {
     button.addEventListener("click", (event) => {
         event.stopPropagation();
+
         console.log("Button clicked:", button);
         const playerMove = button.getAttribute("data-choice");
         console.log("playerMove: ", playerMove);
