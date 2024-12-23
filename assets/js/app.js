@@ -48,8 +48,8 @@ function triggerPlayAnimation() {
     const playerMoveImg = document.getElementById("player-move");
     const computerMoveImg = document.getElementById("computer-move");
 
-    playerMoveImg.src = `../assets/images/left/rock-left.svg`;
-    computerMoveImg.src = `../assets/images/right/rock-right.svg`;
+    playerMoveImg.src = `./assets/images/left/rock-left.svg`;
+    computerMoveImg.src = `./assets/images/right/rock-right.svg`;
     
 
     playerMoveImg.classList.add("bounce");
@@ -91,8 +91,8 @@ function updateGameScore(result, playerMove, computerMove) {
     playerScoreLabel.textContent = playerScore;
     computerScoreLabel.textContent = computerScore;
 
-    playerMoveImg.src = `../assets/images/left/${playerMove}-left.svg`;
-    computerMoveImg.src = `../assets/images/right/${computerMove}-right.svg`;
+    playerMoveImg.src = `./assets/images/left/${playerMove}-left.svg`;
+    computerMoveImg.src = `./assets/images/right/${computerMove}-right.svg`;
 } // updateGame
 
 
