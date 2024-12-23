@@ -48,12 +48,16 @@ function triggerPlayAnimation() {
     const playerMoveImg = document.getElementById("player-move");
     const computerMoveImg = document.getElementById("computer-move");
 
+    playerMoveImg.src = `/assets/images/left/rock-left.svg`;
+    computerMoveImg.src = `/assets/images/right/rock-right.svg`;
+    
+
     playerMoveImg.classList.add("bounce");
-    computerMoveImg.classList.add("bounce");
+    computerMoveImg.classList.add("bounceR");
 
     setTimeout(() => {
         playerMoveImg.classList.remove("bounce");
-        computerMoveImg.classList.remove("bounce");
+        computerMoveImg.classList.remove("bounceR");
     }, 900);
 } // triggerPlayAnimation
 
@@ -63,9 +67,9 @@ function triggerPlayAnimation() {
  * 
  * @param {string} result the result of the round.
  * @param {string} playerMove the player's move.
- * @param {string} ComputerMove the computer's move.
+ * @param {string} computerMove the computer's move.
  */
-function updateGameScore(result, playerMove, ComputerMove) {
+function updateGameScore(result, playerMove, computerMove) {
     const resultMessageLabel = document.getElementById("result-message");
     const playerScoreLabel = document.getElementById("player-score");
     const computerScoreLabel = document.getElementById("computer-score");
@@ -79,6 +83,8 @@ function updateGameScore(result, playerMove, ComputerMove) {
         computerScore++;
         resultMessageLabel.textContent = "You lose!";
     } else {
+        playerScore++;
+        computerScore++;
         resultMessageLabel.textContent = "You draw!";
     } // if
 
@@ -88,6 +94,7 @@ function updateGameScore(result, playerMove, ComputerMove) {
     playerMoveImg.src = `/assets/images/left/${playerMove}-left.svg`;
     computerMoveImg.src = `/assets/images/right/${computerMove}-right.svg`;
 } // updateGame
+
 
 const buttons = document.querySelectorAll(".choice");
 console.log(buttons);
@@ -103,8 +110,17 @@ buttons.forEach(button => {
         let result = calculateWinner(playerMove, computerMove);
         console.log("result: ", result);
 
-        
+        console.log("Starting game animation");
 
+        
+        triggerPlayAnimation();
+
+
+        console.log("updating game state");
+
+        setTimeout(() => {
+            updateGameScore(result, playerMove, computerMove);
+        }, 900);
     });
 });
 

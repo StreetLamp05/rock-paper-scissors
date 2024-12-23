@@ -45,8 +45,24 @@ body {
     }
 }
 
+@keyframes bounceR {
+    0% {
+        transform: rotateZ(0%);
+    }
+    50% {
+        transform: rotateZ(7deg);
+    }
+    100% {
+        transofrm: rotateZ(-7deg);
+    }
+}
+
 .bounce {
     animation: bounce 0.3s ease-in-out 3;
+}
+
+.bounceR {
+    animation: bounceR 0.3s ease-in-out 3;
 }
 
 .move-score {
