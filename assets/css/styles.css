@@ -188,3 +188,18 @@ body {
     list-style-type: none;
     
 }
+
+
+::-webkit-scrollbar {
+    width: auto;
+}
+::-webkit-scrollbar-thumb {
+    background: #E43d12;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #141414;
+}
+::-webkit-scrollbar-track {
+    background: #EBE9E1;
+    border-left: 1px solid #141414;
+}
