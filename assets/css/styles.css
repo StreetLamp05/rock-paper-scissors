@@ -10,7 +10,6 @@ body {
 }
 
 
-
 .header {
     display: flex;
     flex-direction: row;
@@ -143,6 +142,20 @@ body {
     font-size: 35px;
     background-color: #E43d12;
     color: #EBE9E1;
+    margin-bottom: 1em;
+}
+
+.card-holder-container {
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+
+}
+
+.card-holder {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
 }
 
 .about-card {
@@ -152,9 +165,10 @@ body {
     gap: 0;
     color: #222;
     background-color: #efb11d;
-    margin: 2em 1em;
+    margin: 1em 2em;
     border-radius: 1em;
-    padding: 1em;
+    padding: 2em;
+   
 }
 
 .about-card h2,h3,p {
@@ -164,4 +178,13 @@ body {
 
 .about-card h2 {
     font-size: 35px;
+}
+
+.contact a {
+    color: #222;
+}
+
+.contact ul {
+    list-style-type: none;
+    
 }
