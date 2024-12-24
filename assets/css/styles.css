@@ -1,9 +1,12 @@
+
+
 body {
     background-color: #EBE9E1;
     display: flex;
     flex-direction: column;
     font-family: "Lexend", serif;
     color: #E43d12;
+    margin: 0;
 }
 
 
@@ -17,6 +20,7 @@ body {
     align-items: center;
     padding: 0 5%;
     margin: 0;
+    margin-bottom: 2em;
 }
 
 .header a {
@@ -132,4 +136,32 @@ body {
 }
 .choice:hover {
     transform: rotateZ(-7deg);
+}
+
+.page-title-word {
+    text-align: center;
+    font-size: 35px;
+    background-color: #E43d12;
+    color: #EBE9E1;
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    color: #222;
+    background-color: #efb11d;
+    margin: 2em 1em;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.about-card h2,h3,p {
+    margin: 0.5em;
+    text-wrap: pretty;
+}
+
+.about-card h2 {
+    font-size: 35px;
 }
