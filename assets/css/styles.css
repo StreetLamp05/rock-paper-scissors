@@ -19,6 +19,11 @@ body {
     margin: 0;
 }
 
+.header a {
+    color:#E43d12;
+    text-decoration: none;
+}
+
 .nav-bar {
     display: flex;
     align-items: center;
@@ -26,11 +31,26 @@ body {
     list-style-type: none;
     margin: 0;
 }
-.link {
+.nav-links {
     text-decoration: none;
     color: #E43d12;
-
+    transition: .3s ease-in-out;
 }
+
+.nav-links::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #E43d12;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links:hover::after {
+    width: 100%;
+}
+
 
 
 @keyframes bounce {
